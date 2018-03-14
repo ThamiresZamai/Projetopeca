@@ -6,19 +6,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Consulta Agenda</title>
+<title>Consulta Peças</title>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 </head>
 <body>
 
 <div style="padding-top: 5%"></div>
 <div class="col-sm-6">
-<h1>Agenda</h1>
+<h1>Consulta de Peças</h1>
 <div style="padding-top: 5%"></div>
-<a href="cadastro.jsp" class="btn btn-dark">Novo</a>
+<a href="cadastro.jsp" class="btn btn-danger">Novo</a>
 
 <div style="padding-top: 3%"></div>
-<table class="table table-hover table-dark">
+<table class="table table-hover table-danger">
   <thead>
     <tr>
       <th scope="col">#</th>

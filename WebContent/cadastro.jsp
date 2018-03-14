@@ -11,10 +11,10 @@
 </head>
 <body>
 <div align="center">
-		<h1>Agenda</h1>
+		<h1>Peças</h1>
 		<form action="cadastrar.jsp" method="post">
 
-			<div class="col-sm-6">
+			<div class="col-md-6">
 
 				<div class="form-group">
 					<div class="row">
@@ -52,7 +52,7 @@
 					</div>
 				</div>
 
-				<input type="submit" value="Salvar" class="btn btn-primary" />
+				<input type="submit" value="Salvar" class="btn btn-danger" />
 				<a href="consultar.jsp" class="btn btn-light">Cancelar</a>
 			</div>
 		</form>
