@@ -13,42 +13,43 @@
 <div align="center">
 		<h1>Peças</h1>
 		<form action="cadastrar.jsp" method="post">
-
+		
+		<input type="hidden" class="form-control" id="id" name="id" value="${param.id}">
+		 
 			<div class="col-md-6">
 
 				<div class="form-group">
 					<div class="row">
 						<label for="nome">Nome</label> <input type="text"
-							class="form-control" id="nome" name="nome">
-
+							class="form-control" id="nome" name="nome" value="${param.nome}">
 					</div>
 
 				</div>
 				<div class="form-group">
 					<div class="row">
 						<label for="nome">Peso</label> <input type="text"
-							class="form-control" id="peso" name="peso">
+							class="form-control" id="peso" name="peso" value="${param.peso}">
 					</div>
 				</div>
 				
 				<div class="form-group">
 					<div class="row">
 						<label for="nome">Tipo</label> <input type="text"
-							class="form-control" id="tipo" name="tipo">
+							class="form-control" id="tipo" name="tipo" value="${param.tipo}">
 					</div>
 				</div>
 				
 				<div class="form-group">
 					<div class="row">
-						<label for="nome">Data Cadastro</label> <input type="text"
-							class="form-control" id="dataCadastro" name="dataCadastro">
+						<label for="nome">Data_Cadastro</label> <input type="text"
+							class="form-control" id="dataCadastro" name="dataCadastro" value="${param.dataCadastro}">
 					</div>
 				</div>
 				
 				<div class="form-group">
 					<div class="row">
 						<label for="nome">Valor</label> <input type="text"
-							class="form-control" id="valor" name="valor">
+							class="form-control" id="valor" name="valor" value="${param.valor}">
 					</div>
 				</div>
 

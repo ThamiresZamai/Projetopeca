@@ -10,6 +10,7 @@
 </head>
 <body>
 <% 
+String id = request.getParameter("id");
 String nome = request.getParameter("nome");
 String peso = request.getParameter("peso");
 String tipo = request.getParameter("tipo");
@@ -17,22 +18,21 @@ String dataCadastro = request.getParameter("dataCadastro");
 String valor = request.getParameter("valor");
 
 Cadastro cadastro = new Cadastro();
-//double dOne = 0.0d;
-
-//dOne = Double.parseDouble(peso);
 
 cadastro.setNome(nome);
-
-cadastro.setPeso(0);
 cadastro.setPeso(Double.parseDouble(peso));
 cadastro.setTipo(tipo);
 cadastro.setDataCadastro(dataCadastro);
-cadastro.setValor(0);
 cadastro.setValor(Double.parseDouble(valor));
 
-if (new CadastroDB().inserir(cadastro)){
-	response.sendRedirect("consultar.jsp");
-}
+if (!id.isEmpty() || Integer.parseInt(id) > 0){ 
+	cadastro.setId(Integer.parseInt(id)); 
+	new CadastroDB().alterar(cadastro);
+	
+}else{ 
+new CadastroDB().inserir(cadastro); 
+ } 
+response.sendRedirect("consultar.jsp"); 
 %>
 </body>
 </html>

@@ -10,6 +10,8 @@ public class Cadastro {
 	public double Valor;
 	
 	public Cadastro() {
+		this.Peso = 0;
+		this.Valor = 0;
 	}
 
 	public Cadastro(int id, String Nome, double Peso, String Tipo, String DataCadastro, double Valor) {

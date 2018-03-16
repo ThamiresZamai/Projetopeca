@@ -45,6 +45,26 @@ public class CadastroDB {
 		
 	}
 	
+	public boolean alterar(Cadastro cadastro) throws SQLException { 
+		try { 
+			PreparedStatement stmt = this.connection 
+					.prepareStatement("UPDATE CADASTRO SET nome= ?, peso= ?, tipo= ?, dataCadastro= ?, valor= ? WHERE id = ?"); 
+			stmt.setString(1, cadastro.getNome()); 
+			stmt.setDouble(2, cadastro.getPeso()); 
+            stmt.setString(3, cadastro.getTipo());
+            stmt.setString(4, cadastro.getDataCadastro());
+            stmt.setDouble(5, cadastro.getValor());
+            stmt.setInt(6, cadastro.getId());
+			stmt.execute(); 
+			return true; 
+		} catch (SQLException e) { 
+			System.err.println(e.toString()); 
+		} finally { 
+			connection.close(); 
+		} 
+		return false; 
+	} 
+	
 	public List<Cadastro> getAll(){
 		
 		List<Cadastro> lstcadastro = new ArrayList<>();
@@ -60,6 +80,21 @@ public class CadastroDB {
 		}
 		return lstcadastro;
 	}
+	
+	public boolean excluir(int id) throws SQLException { 
+		try { 
+			PreparedStatement stmt = this.connection 
+					.prepareStatement("DELETE FROM CADASTRO WHERE ID =?"); 
+			stmt.setInt(1, id); 
+			stmt.execute(); 
+			return true; 
+		} catch (SQLException e) { 
+			System.err.println(e.toString()); 
+		} finally { 
+			connection.close(); 
+		} 
+		return false; 
+	} 
 		
 }
 
